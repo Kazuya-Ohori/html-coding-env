@@ -1,0 +1,21 @@
+doctype html
+html
+  head(prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title 一覧
+    meta(name='description', content=description)
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    link(rel='stylesheet', type='text/css', href='./css/main.css', media='all')
+    link(rel='shortcut icon', href='')
+
+  body
+    .parts-menu(style='width: 80%; margin: auto;')
+      ul.parts-menu__menu
+        each file, index in files
+          li.parts-menu__list(style='list-style-type: none; border: 1px solid #0064d50d')
+            a(href=file,target="blank", style='padding: 8px 12px; width: 100%; text-decoration: none; display: inline-block; box-sizing: border-box; color: #424242;').parts-menu__link
+              p.parts-menu__title(style='margin: 0; font-size: 14px')=titles[index]
+              p.parts-menu__files(style='margin: 0; font-size: 12px;')=file
+              p.parts-menu__date(style='margin: 0; text-align: right; font-size: 10px; margin-left: auto;')=`更新日:${dates[index].year}年${dates[index].month}月${dates[index].date}日`
+

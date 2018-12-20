@@ -1,0 +1,22 @@
+- var env = process.env.NODE_ENV;
+- var path = './';
+- var modalFormNumber = 0;
+case env
+  when 'prod'
+    //- 本番用のCloudFront URL
+    - path = '/';
+  when 'stg'
+    //- stg用のCloudFront URL
+    - path = './';
+  when 'design'
+    //- design用のCloudFront URL
+    - path = './';
+  default
+    - path = './';
+-
+  var items = [
+    {
+        "name": "_",
+        "href": "_.html"
+    }
+  ];

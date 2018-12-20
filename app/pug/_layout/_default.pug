@@ -1,0 +1,36 @@
+include ../_config/_config
+
+//- 変数初期設定
+- var id          = ''
+- var title       = ''
+- var pageClass   = pageClass
+block vars
+
+doctype html
+html
+  block head
+    head(prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#')
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+      title= title
+      meta(name='description', content=description)
+      meta(name="keywords" content=keywords)
+      meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+      // link(href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Oswald:200,300,400,500,600,700" rel="stylesheet")
+      // link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css")
+      link(rel='stylesheet', type='text/css', href=path + 'css/main.css', media='all')
+      link(rel='shortcut icon', href='img/favicon.ico')
+  body(class=pageClass)
+
+    if isHeader
+      include ../_element/_header
+    block main
+      if pageClass
+        main(class=pageClass)
+          block content
+      else
+        main
+          block content
+    //- block footer
+    script(src=path +"js/index.bundle.js")

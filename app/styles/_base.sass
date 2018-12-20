@@ -1,0 +1,75 @@
+html
+  font-size: 10px
+  background: #fff
+  scroll-behavior: smooth
+body
+  position: relative
+  line-height: 1.5
+  font-family: $ff
+  font-size: $sizeDefault
+  color: $colorBlack
+  margin: 0 auto 0 0
+  padding: 0
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+
+*
+ box-sizing: border-box
+
+p
+  margin: 0
+
+a
+  text-decoration: none
+  color: $colorBlue
+  transition: opacity .3s ease
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  &:hover
+    cursor: pointer
+button
+  transition: opacity .3s ease
+  &:hover
+    opacity: .5
+img
+  max-width: 100%
+  vertical-align: bottom
+
+main
+  width: 100%
+  overflow: hidden
+  background: $colorWhite
+  padding: 0px
+
+body
+  *
+    outline: 0
+    &::-moz-focus-inner
+      border: 0
+
+*:placeholder-shown
+  color: $colorPlaceHolder
+
+/* Google Chrome, Safari, Opera 15+, Android, iOS */
+*::-webkit-input-placeholder
+  color: $colorPlaceHolder
+
+/* Firefox 18- */
+*:-moz-placeholder
+  color: $colorPlaceHolder
+  opacity: 1
+
+/* Firefox 19+ */
+*::-moz-placeholder
+  color: $colorPlaceHolder
+  opacity: 1
+
+/* IE 10+ */
+*:-ms-input-placeholder
+  color: $colorPlaceHolder
+
+::-ms-expand
+  display: none
+
+input, select
+  &:focus
+    outline: 0

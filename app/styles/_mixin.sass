@@ -1,0 +1,30 @@
+// custom media query
+=mediaQuery($size)
+  @media(min-width: $size)
+    @content
+
+// sp縦
+=sp
+  @media only screen and (max-width: $sp - 1)
+    @content
+
+// sp横
+=spH
+ @media only screen and (min-width: $sp) and (max-width: $spH - 1)
+    @content
+
+// tablet
+=tbl
+  @media only screen and (min-width: $spH) and (max-width: $tbl - 1)
+    @content
+
+// small pc
+=pcS
+  @media only screen and (min-width: $tbl) and (max-width: $pc - 1)
+    @content
+
+// pc
+=pc
+  @media only screen and (min-width: $pc)
+    @content
+

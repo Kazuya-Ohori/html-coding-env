@@ -74,7 +74,7 @@
     "jquery-validation": "^1.17.0",
     "nodemon": "^1.11.0",
     "postcss-sprites": "^4.2.1",
-    "pug": "^2.0.0-rc.2",
+    "pug": "^3.0.1",
     "rimraf": "^2.6.1",
     "sass-easing": "^1.0.3",
     "stylelint": "^8.0.0",

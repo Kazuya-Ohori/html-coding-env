@@ -80,7 +80,7 @@
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0",
     "url-loader": "^0.5.9",
-    "validator": "^9.4.1",
+    "validator": "^13.7.0",
     "webpack": "^3.3.0",
     "webpack-dev-middleware": "^1.11.0",
     "webpack-hot-middleware": "^2.18.2",
